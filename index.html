@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip calculator app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="images/logo.svg" class="logo" alt="" />
+      </div>
+    </header>
+
+    <main>
+      <div class="calculator">
+        <div class="inputs-section">
+          <form>
+            <div class="form-group bg-accent-1">
+              <label for="input-bill">Bill</label>
+
+              <div class="position-relative">
+                <img src="images/icon-dollar.svg" class="icon" alt="" />
+
+                <input
+                  type="text"
+                  id="input-bill"
+                  class="accent-box fs-800 txt-neutral-6"
+                  placeholder="0"
+                />
+              </div>
+            </div>
+
+            <fieldset class="form-group bg-accent-2">
+              <legend>Select Tip %</legend>
+              <div class="grid-group fs-800 txt-center txt-neutral-1">
+                <input
+                  type="radio"
+                  id="tip-value--5"
+                  name="tip-value"
+                  value="5"
+                />
+                <label for="tip-value--5" class="accent-box"> 5% </label>
+
+                <input
+                  type="radio"
+                  id="tip-value--10"
+                  name="tip-value"
+                  value="10"
+                />
+                <label for="tip-value--10" class="accent-box"> 10% </label>
+
+                <input
+                  type="radio"
+                  id="tip-value--15"
+                  name="tip-value"
+                  value="15"
+                />
+                <label for="tip-value--15" class="accent-box"> 15% </label>
+
+                <input
+                  type="radio"
+                  id="tip-value--25"
+                  name="tip-value"
+                  value="25"
+                />
+                <label for="tip-value--25" class="accent-box"> 25% </label>
+
+                <input
+                  type="radio"
+                  id="tip-value--50"
+                  name="tip-value"
+                  value="50"
+                />
+                <label for="tip-value--50" class="accent-box"> 50% </label>
+
+                <input
+                  type="text"
+                  id="tip-value--custom"
+                  class="accent-box bg-accent-1"
+                  name="tip-custom-value"
+                  placeholder="Custom"
+                />
+              </div>
+            </fieldset>
+
+            <div class="form-group with-error-field">
+              <label for="input-num-of-people">Number of People</label>
+
+              <div class="position-relative">
+                <img src="images/icon-person.svg" class="icon" alt="" />
+
+                <input
+                  type="text"
+                  id="input-num-of-people"
+                  class="fs-800 accent-box bg-accent-1 txt-neutral-6"
+                  placeholder="0"
+                />
+              </div>
+
+              <span class="error" aria-hidden="true" aria-invalid="false"
+                >Can't be zero</span
+              >
+            </div>
+          </form>
+        </div>
+
+        <div class="totals-section">
+          <div>
+            <p class="txt-neutral-1">
+              Tip Amount <span class="fs-300 txt-neutral-4">/ person</span>
+            </p>
+            <p id="tipAmtPerPerson" class="fs-900 txt-primary-1">$0.00</p>
+          </div>
+
+          <div>
+            <p class="txt-neutral-1">
+              Total <span class="fs-300 txt-neutral-4">/ person</span>
+            </p>
+            <p id="totalPerPerson" class="fs-900 txt-primary-1">$0.00</p>
+          </div>
+
+          <button id="reset-btn" class="btn accent-box bg-accent-3" disabled>
+            RESET
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
